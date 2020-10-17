@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a4d51bac0bfd540a8345b573d70e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyobstacle: {fileID: 4117672842232414266, guid: 3768e0e5fff1a7e4c894168708de556b,
+  enemyobstacle: {fileID: 7666443500382044575, guid: d0f68adc5a359304d914e275ea14b5a2,
     type: 3}
 --- !u!1 &2351670410103818463
 GameObject:

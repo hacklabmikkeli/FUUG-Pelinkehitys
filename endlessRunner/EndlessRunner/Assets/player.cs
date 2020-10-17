@@ -19,16 +19,32 @@ public class player : MonoBehaviour
     public int health = 3;
     public GameObject effect;
 
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
+
+    void Start()
+    {
+        currentHealth = health; 
+        healthBar.SetMAxHealth(health);   
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             
             Instantiate(effect, transform.position, Quaternion.identity);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        
+        if (currentHealth >= 3)
+        {
+             currentHealth = 3;
+        }
+       
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);   
         if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
         {
@@ -41,5 +57,10 @@ public class player : MonoBehaviour
             targetPos = new Vector2( transform.position.x , transform.position.y - Yincrement);
                  
         }
+        healthBar.SetHealth(currentHealth);
+        
     }
+
+    
+    
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class player : MonoBehaviour
 {
   
@@ -23,6 +23,7 @@ public class player : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameObject gameOver;
 
     void Start()
     {
@@ -37,9 +38,10 @@ public class player : MonoBehaviour
         {
             
             Instantiate(effect, transform.position, Quaternion.identity);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameOver.SetActive(true);  
+            Destroy(gameObject);
         }
-        
+
         if (currentHealth >= 3)
         {
              currentHealth = 3;

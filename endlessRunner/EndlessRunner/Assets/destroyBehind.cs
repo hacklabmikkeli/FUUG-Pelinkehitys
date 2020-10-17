@@ -1,22 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class destroyBehind : MonoBehaviour
 {
 
-    
+    public int score;
+    public Text ScoreDisplay;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
+    private void Update() {
+        ScoreDisplay.text = score.ToString();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Enemy"))
+        {
+            score++;
+            Debug.Log(score);
+        }
     }
 }

@@ -8,6 +8,12 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject effect;
     public int speed;
     
+    private ShakeCamera shake;
+
+    void Start()
+    {
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeCamera>();
+    }
   
 
     void Update()
@@ -22,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player"))
         {
+            shake.CamShake();
            
             Instantiate(effect, transform.position, Quaternion.identity);
             other.GetComponent<player>().currentHealth -= damage;
@@ -31,7 +38,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-           
+           shake.CamShake();
             Instantiate(effect, transform.position, Quaternion.identity);
             
             Destroy(gameObject);

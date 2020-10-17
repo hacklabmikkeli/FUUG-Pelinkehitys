@@ -9,6 +9,13 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+endlessRunner/EndlessRunner/.vscode/settings.json
+endlessRunner/EndlessRunner/Library
+endlessRunner/EndlessRunner/Logs
+endlessRunner/EndlessRunner/Temp
+endlessRunner/EndlessRunner/Packages
+endlessRunner/EndlessRunner/ProjectSettings
+
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

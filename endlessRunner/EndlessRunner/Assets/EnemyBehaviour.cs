@@ -7,6 +7,9 @@ public class EnemyBehaviour : MonoBehaviour
     public int damage = 1;
     public float speed;
  
+    public GameObject effect;
+
+
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -15,6 +18,8 @@ public class EnemyBehaviour : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player"))
         {
+           
+            Instantiate(effect, transform.position, Quaternion.identity);
             other.GetComponent<player>().health -= damage;
             Destroy(gameObject);
         }    

@@ -15,6 +15,12 @@ endlessRunner/EndlessRunner/Logs
 endlessRunner/EndlessRunner/Temp
 endlessRunner/EndlessRunner/Packages
 endlessRunner/EndlessRunner/ProjectSettings
+endlessRunner/KPS/.vscode/settings.json
+endlessRunner/KPS/Library
+endlessRunner/KPS/Logs
+endlessRunner/KPS/Temp
+endlessRunner/KPS/Packages
+endlessRunner/KPS/ProjectSettings
 
 
 # MemoryCaptures can get excessive in size.
